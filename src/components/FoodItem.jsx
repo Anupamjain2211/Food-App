@@ -3,6 +3,7 @@ import FoodCard from "./FoodCard";
 import FoodData from "../data/FoodData";
 import toast, { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
+import Footer from "./Footer";
 
 const FoodItem = () => {
   const category = useSelector((state) => state.category.category);
@@ -37,6 +38,7 @@ const FoodItem = () => {
           />
         ))}
       </div>
+      <div className="flex justify-center items-center font-bold mb-5"> <Footer/> </div>
     </>
   );
 };
