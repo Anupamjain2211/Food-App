@@ -1,6 +1,9 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import {setSearch} from "../redux/slices/SearchSlice"
 
 const Navbar = () => {
+const dispatch = useDispatch()
   return (
     <nav className="flex flex-col lg:flex-row justify-between mx-6 py-3 mb-10">
       <div>
@@ -15,6 +18,7 @@ const Navbar = () => {
           name="search"
           id=""
           placeholder="Search Here"
+          onChange={(e)=>dispatch(setSearch(e.target.value))}
           autoComplete="off"
           className="p-3 border border-gray-500 text-sm rounded-lg outline-none w-full lg:w-[25vw]"
         />
